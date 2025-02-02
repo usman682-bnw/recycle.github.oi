@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library - About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+           
+            background-color: #f4f4f4;
+        }
+
+  
+
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .mission-statement, .features {
+            padding: 1rem;
+        }
+
+        .features ul {
+            list-style: none;
+        }
+
+        .features li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.5rem;
+            }
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s;
+        }
+    </style>
+    <style>
+
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px ;
+ max-width: 1070px ;
+width: 100%;
+margin: auto ;
+
+            color: white;
+            border-bottom-right-radius: 50px;
+            background-color: white;
+        
+            position: fixed;
+      
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.menu{
+ display: flex;
+}
+.menu li a{
+    padding: 3px 10px ;
+margin: 0px 15px;
+ color: #800000;
+font-weight: 500;
+letter-spacing: 0.5px ;
+transition: all ease 0.3s ;
+}
+ .logo{
+    font-size: 1.4rem ;
+font-weight: 600;
+letter-spacing: 1px ;
+color: #800000;
+ }
+.logo span{
+    color:#800000;
+}
+.img-logo{
+    width: 20%;
+    padding: 0;
+}
+.right-nav{
+display: grid;
+grid-template-columns: auto auto ;
+grid-gap: 25px ;
+}
+.right-nav a{
+width: 40px ;
+height: 40px ;
+display: flex;
+justify-content: center;
+align-items: center;
+ border-radius: 50%;
+position: relative;
+}
+  .right-nav .like{
+    background-color: #fff0ee;
+	 color: #ff6c57;
+}
+.right-nav .cart{
+    background-color: #ead0d0;
+color: #800000;
+ }
+.right-nav a span{
+    position: absolute;
+    top: - 7px ;
+right: - 7px;
+ width: 20px ;
+height: 20px ;
+display: flex;
+justify-content: center;
+align-items: center;
+ border-radius: 50%;
+color: #ffffff;
+font-size: 0.6rem ;
+font-weight: 500;
+}
+ .right-nav .like span{
+    background-color: #ff6c57;
+}
+.right-nav .cart span{
+    background-color: #800000;
+ }
+.menu li a:hover,
+.menu .active{
+    color: #800000;
+transition: all ease 0.3s ;
+ }
+/*==Search-Banner========================*/
+#search-banner{
+    max-width: 1250px ;
+ height: 500px ;
+border-radius: 30px ;
+background-color: #ead0d0;
+margin: 10px auto ;
+position: relative;
+ overflow: hidden;
+background-repeat: no -repeat;
+background-size: 1000px ;
+background-position: bottom right;
+ padding: 20px ;
+display: flex;
+align-items: center;
+}
+
+ .search-banner-text h1{
+    font-size: 3rem ;
+line-height: 55px ;
+color: #fff;
+}
+.search-banner-text strong{
+    color: #800000;
+font-size: 1.4rem ;
+margin-top: 4px;
+}
+ .search-box{
+    background-color: #ffffff;
+height: 50px ;
+display: flex;
+align-items: center;
+margin-top: 25px;
+padding: 0px 5px 0px 20px ;
+border-radius: 30px ;
+}
+.search-box i{
+ font-size: 1.3rem ;
+color: #3b3b3b;
+margin: 0px 10px;
+}
+.search-box .search-input{
+height: 40px ;
+border: none;
+width: 100%;
+padding: 0px 10px ;
+outline: none;
+ }
+.search-box .search-btn{
+    width: 220px ;
+height: 40px ;
+border-radius: 30px ;
+background-color: #800000;
+border: none;
+color: #ffffff;
+outline: none;
+cursor: pointer;
+transition: all ease 0.3s ;
+}
+.search-box .search-btn:hover{
+    background-color: #800000;
+transition: all ease 0.3s ;
+}    
+</style>
+     <style>
+    *{
+    font-family: poppins;
+    margin: 0px;
+padding: 0px ;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+ }
+a{
+    text-decoration: none;
+}
+body{
+ margin: 0px;
+padding: 0px ;
+font-family: poppins;
+}
+::selection{
+color:#ffffff;
+background-color:#800000 ;
+}
+</style>
+<style>
+/*==Making-Responsive===================================*/
+.menu-icon,
+.menu-btn{
+ display: none;
+}
+@media (max-width: 1280px ){
+#search-banner{
+width: 1150px ;
+ }
+ 
+}
+@media (max-width: 1200px ){
+    #search-banner{
+width: 90%;
+ height: 500px ;
+}
+#popular-bundle-pack,
+#popular-product,
+#download-app{
+ width: 90%;
+}
+#popular-bundle-pack{
+    padding: 50px 30px 0px 30px ;
+}
+ }
+@media (max-width: 1050px ){
+
+#search-banner{
+background-size: 700px ;
+}
+#partner{
+width: 90%;
+}
+}
+ @media (max-width: 965px ){
+.navigation{
+justify-content: space-between;
+height: 65px ;
+padding: 35px 25px ;
+ }
+
+.navigation .menu{
+ display: none;
+position: absolute;
+top: 65px ;
+left: 0px;
+z-index: 100 ;
+ background-color: #ffffff;
+width: 100%;
+padding: 0px ;
+margin: 0px ;
+border-bottom: 1px solid rgba( 245 ,245 ,245 );
+ }   
+  .navigation .menu li{
+width: 100%;
+margin: 0px ;
+padding: 0px ;
+ }
+.navigation .menu li a{
+width: 100%;
+height: 40px ;
+display: flex;
+ align-items: center;
+padding: 30px 20px ;
+margin: 0px ;
+border: 1px solid rgba( 248 ,247, 247,0.5 );
+}
+ .menu-icon{
+display: block;
+}
+.navigation .menu-icon{
+cursor: pointer;
+float : right;
+padding: 5px ;
+position: relative;
+user-select : none;
+z-index: 2;
+ }
+.navigation .menu-icon .nav-icon{
+background-color: #141414cc;
+display: block;
+height: 2px ;
+ width: 25px ;
+position: relative;
+transition: background 0.2s ease- out;
+}
+.navigation .menu-icon .nav-icon::before,
+navigation .menu-icon .nav-icon::after{
+background-color: #141414cc;
+content: '' ;
+display: block;
+position: absolute;
+ width: 100%;
+height: 100%;
+transition: all ease- out 0.2s ;
+}
+
+.navigation .menu li a{
+width: 100%;
+height: 40px ;
+display: flex;
+ align-items: center;
+padding: 30px 20px ;
+margin: 0px ;
+border: 1px solid rgba( 248 ,247, 247,0.5 );
+}
+ .menu-icon{
+display: block;
+}
+.navigation .menu-icon{
+cursor: pointer;
+ float : right;
+padding: 5px ;
+position: relative;
+user-select : none;
+z-index: 2;
+ }
+.navigation .menu-icon .nav-icon{
+background-color: #141414cc;
+display: block;
+height: 2px ;
+width: 25px ;
+position: relative;
+transition: background 0.2s ease- out;
+}
+.navigation .menu-icon .nav-icon::before,
+ .navigation .menu-icon .nav-icon::after{
+background-color: #141414cc;
+content: '' ;
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+transition: all ease- out 0.2s ;
+}
+.navigation .menu-icon .nav-icon::before{
+top: 7px ;
+}
+.navigation .menu-icon .nav-icon::after{
+top: - 7px;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::before{
+transform: rotate(- 45deg );
+top: 0px ;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon::after{
+ transform: rotate( 45deg );
+top: 0px ;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon{
+background-color: transparent;
+ }
+.navigation .menu-btn:checked ~ .menu{
+display: block;
+}
+ #search-banner{
+height: 400px ;
+background-size: 500px ;
+}
+
+
+.partner-heading{
+justify-content: center;
+}
+ .logo-container{
+flex-wrap: wrap;
+justify-content: center;
+}
+.logo-container img{
+ margin: 10px ;
+}
+#download-app{
+flex-direction: column;
+height: 100%;
+ background-color: transparent;
+margin-top: 0px;
+width: 90%;
+max-width: 100%;
+}
+ .app-img{
+height: 450px ;
+width: 220px ;
+}
+.download-app-text{
+ max-width: 100%;
+background-color: #ead0d0;
+padding: 20px ;
+border-radius: 20px ;
+margin-top: 20px ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+ }
+.footer-container{
+display: grid;
+grid-template-columns: 1fr 1fr ;
+}
+.footer-links{
+text-align: center;
+}
+}
+@media (max-width: 750px ){
+ #search-banner{
+height: 300px ;
+}
+.search-banner-text{
+margin-left: 20px ;
+ }
+.search-banner-text h1{
+font-size: 2rem;
+line-height: 30px ;
+}
+ 
+.client-box-container{
+grid-template-columns: 1fr ;
+ }
+}
+@media (max-width: 500px ){
+#search-banner{
+height: 200px ;
+ background-size: 300px ;
+}
+.search-banner-text{
+margin-left: 0px ;
+max-width: 100%;
+ }
+.search-banner-text h1{
+font-size: 1.3rem ;
+}
+.search-box{
+width: 100%;
+max-width: 100%;
+height: 40px ;
+padding-left: 10px ;
+}
+ .search-box i{
+font-size: 1rem;
+}
+.search-box .search-btn{
+height: 30px ;
+ }
+.category-container{
+display: grid;
+grid-template-columns: 1fr 1fr ;
+grid-gap: 15px ;
+ }
+
+ .product-container{
+grid-template-columns: 1fr ;
+width:100%;
+height: auto;
+}
+.footer-container{
+grid-template-columns: 1fr ;
+}
+.footer-links{
+ margin-top: 10px ;
+}
+}
+
+
+
+ 
+@media (max-width: 350px ){
+.download-btns{
+flex-direction: column;
+}
+ .download-btns a{
+margin: 4px 0px;
+width: 140px ;
+}
+.download-btns a img{
+ width: 100%;
+}
+
+
+ }
+
+  </style>
+
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Navigation -->
+   
+ <nav class ="navigation" >
+<a href ="index.html" class ="logo" >
+
+<span>Re</span>Cycle
+ </a>
+ 
+<!--menu-btn---->
+<input type ="checkbox" class = "menu-btn" id="menu-btn" >
+<label for= "menu-btn" class ="menu-icon" >
+ <span class = "nav-icon" ></span>
+</label>
+
+<!--menu-------->
+<ul class ="menu" >
+ <li><a href= "home-1.html" class ="active" >Home </a></li>
+<li><a href= "library-1.html">Categories </a></li>
+<li><a href= "#popular-bundle-pack" >About </a></li>
+<li><a href= "#download-app" >Our App </a></li>
+
+</ul>
+
+<!--right-nav-(cart-like)-->
+
+</nav>	
+    <!-- About Content -->
+    <div class="about-container">
+   
+        <div class="about-header">
+            <h1>About Our Digital Library</h1>
+            <p>Your Gateway to Endless Knowledge</p>
+        </div>
+
+        <div class="about-content">
+            <div class="mission-statement">
+                <h2>Our Mission</h2>
+                <p>We are committed to providing free access to quality digital books for readers worldwide. Our platform offers a vast collection of e-books across various genres, ensuring there's something for every reader.</p>
+            </div>
+
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>📚 100,000+ Free E-books</li>
+                    <li>🌍 Available Worldwide</li>
+                    <li>📱 Mobile-Friendly Reading</li>
+                    <li>🔖 Bookmarking System</li>
+                    <li>🎧 Audiobook Options</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats">
+            <h2>Our Impact</h2>
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <h3>1M+</h3>
+                    <p>Active Readers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50K+</h3>
+                    <p>Daily Downloads</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Languages Supported</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Loading screen simulation
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        window.addEventListener('scroll', () => {
+            const features = document.querySelectorAll('.features li');
+            features.forEach(feature => {
+                const featureTop = feature.getBoundingClientRect().top;
+                if (featureTop < window.innerHeight - 100) {
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateX(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
